@@ -1,8 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head><title>IDS Dashboard</title></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network Intrusion Detection</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
 <body>
-  <h1>AI-Based Network Intrusion Detection</h1>
-  <p>Backend is running. Frontend coming soon.</p>
+<header>
+  <div>
+    <h1>Network Intrusion Detection</h1>
+    <p>Checks recorded IoT traffic and flags suspicious flows. A prototype: no live 5G network or hardware is used.</p>
+  </div>
+  <button id="reset" class="ghost">Reset counters</button>
+</header>
+
+<main>
+  <section class="cards">
+    <div class="card"><span>Traffic analyzed</span><b id="c-total">0</b></div>
+    <div class="card ok"><span>Normal</span><b id="c-normal">0</b></div>
+    <div class="card bad"><span>Attack</span><b id="c-attack">0</b></div>
+    <div class="card"><span>Attack share</span><b id="c-share">0%</b></div>
+  </section>
+
+  <section class="panel">
+    <h2>Check a traffic file</h2>
+    <div class="row">
+      <input type="file" id="file" accept=".csv">
+      <button id="upload">Analyze file</button>
+    </div>
+    <div id="upload-msg" class="msg"></div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>Normal vs attack</h2>
+      <div class="donut-wrap"><div id="donut" class="donut"></div>
+        <ul class="legend"><li><i class="dot"></i>Normal</li><li><i class="dot bad"></i>Attack</li></ul></div>
+    </div>
+    <div class="panel">
+      <h2>Attack types found</h2>
+      <div id="fam-bars" class="bars"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Check a single flow</h2>
+    <div class="row">
+      <button id="s-attack" class="ghost">Load sample attack</button>
+      <button id="s-normal" class="ghost">Load sample normal</button>
+      <button id="predict">Check flow</button>
+    </div>
+    <div id="result" class="result"></div>
+    <details>
+      <summary>Edit traffic values</summary>
+      <div id="fields" class="fields"></div>
+    </details>
+  </section>
+
+  <section class="panel" id="rows-panel" hidden>
+    <h2>Results (first 200 rows)</h2>
+    <div class="tablewrap"><table id="rows"></table></div>
+  </section>
+</main>
+<footer>Built on one public lab dataset. Results do not guarantee performance on other networks.</footer>
+<script src="/static/script.js"></script>
 </body>
 </html>
