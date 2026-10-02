@@ -1,0 +1,148 @@
+{
+  "train_rows": 257631,
+  "test_rows": 64408,
+  "n_features": 41,
+  "test_normal": 4000,
+  "test_attack": 60408,
+  "binary": {
+    "accuracy": 0.9909483294000745,
+    "precision": 0.995428722858042,
+    "recall": 0.9949178916699775,
+    "f1": 0.9951732417104773,
+    "roc_auc": 0.9987672804098795,
+    "false_positive_rate": 0.069,
+    "confusion_matrix": [
+      [
+        3724,
+        276
+      ],
+      [
+        307,
+        60101
+      ]
+    ],
+    "labels": [
+      "Normal",
+      "Attack"
+    ]
+  },
+  "family": {
+    "accuracy": 0.9840858278474723,
+    "macro_f1": 0.8377089962079579,
+    "weighted_f1": 0.9835611374395089,
+    "confusion_matrix": [
+      [
+        3868,
+        0,
+        0,
+        0,
+        0,
+        70,
+        62,
+        0
+      ],
+      [
+        18,
+        34,
+        0,
+        0,
+        0,
+        8,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        32821,
+        6,
+        1,
+        6,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        17,
+        12311,
+        1,
+        4,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        19,
+        0,
+        11238,
+        0,
+        4,
+        0
+      ],
+      [
+        214,
+        0,
+        11,
+        0,
+        0,
+        1254,
+        110,
+        0
+      ],
+      [
+        268,
+        0,
+        0,
+        0,
+        0,
+        114,
+        1828,
+        1
+      ],
+      [
+        20,
+        0,
+        0,
+        0,
+        0,
+        20,
+        39,
+        29
+      ]
+    ],
+    "labels": [
+      "Benign",
+      "BruteForce",
+      "DDoS",
+      "DoS",
+      "Mirai",
+      "Recon",
+      "Spoofing",
+      "Web"
+    ]
+  },
+  "test_family_counts": {
+    "DDoS": 32836,
+    "DoS": 12336,
+    "Mirai": 11263,
+    "Benign": 4000,
+    "Spoofing": 2211,
+    "Recon": 1589,
+    "Web": 108,
+    "BruteForce": 65
+  },
+  "top_features": {
+    "rst_count": 0.1475,
+    "urg_count": 0.1343,
+    "Variance": 0.0926,
+    "flow_duration": 0.0743,
+    "ack_flag_number": 0.0683,
+    "Duration": 0.0527,
+    "IAT": 0.0505,
+    "Header_Length": 0.0492,
+    "Radius": 0.0439,
+    "Magnitue": 0.0319
+  }
+}

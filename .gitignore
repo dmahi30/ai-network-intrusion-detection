@@ -1,0 +1,4 @@
+venv/
+dataset/IoT_Intrusion.csv
+dataset/subset.csv
+__pycache__/

@@ -1,0 +1,57 @@
+[
+  {
+    "model": "Logistic Regression",
+    "accuracy": 0.9496335858899515,
+    "precision": 0.9988132635253054,
+    "recall": 0.9474241822275196,
+    "f1": 0.9724402759370646,
+    "roc_auc": 0.9860218762415576,
+    "false_positive_rate": 0.017,
+    "train_seconds": 5.9,
+    "predict_seconds": 0.07
+  },
+  {
+    "model": "Naive Bayes",
+    "accuracy": 0.944494472736306,
+    "precision": 0.9861427129488649,
+    "recall": 0.9542279168322076,
+    "f1": 0.9699228510613237,
+    "roc_auc": 0.9614495513839227,
+    "false_positive_rate": 0.2025,
+    "train_seconds": 0.4,
+    "predict_seconds": 0.23
+  },
+  {
+    "model": "Decision Tree",
+    "accuracy": 0.9885728480934045,
+    "precision": 0.9934832947403242,
+    "recall": 0.9943384982121574,
+    "f1": 0.9939107125128239,
+    "roc_auc": 0.9479192491060785,
+    "false_positive_rate": 0.0985,
+    "train_seconds": 3.0,
+    "predict_seconds": 0.03
+  },
+  {
+    "model": "Random Forest",
+    "accuracy": 0.9909483294000745,
+    "precision": 0.995428722858042,
+    "recall": 0.9949178916699775,
+    "f1": 0.9951732417104773,
+    "roc_auc": 0.9987672804098795,
+    "false_positive_rate": 0.069,
+    "train_seconds": 15.0,
+    "predict_seconds": 0.33
+  },
+  {
+    "model": "Gradient Boosting",
+    "accuracy": 0.9868494596944479,
+    "precision": 0.9993628116773144,
+    "recall": 0.9866077340749569,
+    "f1": 0.9929443125494606,
+    "roc_auc": 0.9988110618626672,
+    "false_positive_rate": 0.0095,
+    "train_seconds": 5.8,
+    "predict_seconds": 0.29
+  }
+]
